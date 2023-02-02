@@ -1,5 +1,6 @@
 import { Garagem } from "./Componentes/Garagem/Garagem";
 import { GlobalStyle } from "./GlobalStyle"
+import imgCarro  from "./img/carro.png"
 
 export default function App() {
   const nome = "Labenu";
@@ -11,7 +12,7 @@ export default function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Garagem nome={nome} mensagemAprentacao={apresentaGaragem} />
+      <Garagem nome={nome} mensagemAprentacao={apresentaGaragem} imagemCarro ={imgCarro}/>
     </div>
   );
 }

@@ -11,7 +11,6 @@ export const Botao = styled.button`
 `
 
 export const GaragemContainer = styled.main`
-  background-color:lightcoral;
   padding:2rem;
   display:flex;
   flex-direction:column;
@@ -20,7 +19,11 @@ export const GaragemContainer = styled.main`
 `
 
 export const Estacionamento = styled.section`
+  background-color:lightgray;
+  padding:5vw;
+  border-radius:0.5rem;
   display:grid;
   grid-template-columns: repeat(2,1fr);
   gap:5vw;
+
 `
