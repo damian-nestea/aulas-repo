@@ -4,18 +4,12 @@ import { GlobalStyled } from './GlobalStyled'
 
 export default function App() {
 
-/*   let nome = 'Labenu' */
-
-  function btnMudaNome() {
-    setNome('Damián')
-  } 
-
   const [nome,setNome] = useState('Labenu');
   return (
     <div className="App">
       <GlobalStyled />
 
-      <Garagem nome={nome} btnMudaNome = {btnMudaNome} />
+      <Garagem nome={nome} setNome = {setNome} />
     </div>
   )
 }
