@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import  FormularioCadastro  from "./components/FormularioCadastro/FormularioCadastro";
 import { Header } from "./components/Header";
@@ -17,6 +18,21 @@ const Container = styled.div`
 `;
 
 function App() {
+  const [inputImage, setInputImage] = React.useState("");
+  const [inputDescription, setInputDescription] = React.useState("");
+  const [inputTitulo, setInputTitulo] = React.useState("");
+
+  const onChangeImage = (e) => {
+    setInputImage(e.target.value);
+  }
+
+  const onChangeDescription = (e) => {
+    setInputDescription(e.target.value);
+  }
+
+  const onChangeTitulo = (e) => {
+    setInputTitulo(e.target.value);
+  }
   
   return (
     <>
@@ -24,9 +40,20 @@ function App() {
       <Container>
         <aside>
           <Header />
-          <FormularioCadastro />
+          <FormularioCadastro
+            inputImage = {inputImage}
+            inputDescription = {inputDescription}
+            inputTitulo = {inputTitulo}
+            onChangeImage =  {onChangeImage}
+            onChangeDescription = {onChangeDescription}
+            onChangeTitulo = {onChangeTitulo}
+          />
         </aside>
-        <TelaDaPostagem/>
+        <TelaDaPostagem 
+          inputImage = {inputImage} 
+          inputDescription = {inputDescription}  
+          inputTitulo = {inputTitulo}  
+        />
       </Container>
     </>
   );

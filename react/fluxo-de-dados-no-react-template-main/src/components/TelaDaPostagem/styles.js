@@ -18,6 +18,12 @@ export const Image = styled.img`
 
 export const Description = styled.p`
     max-width: 500px;
+    padding-top: 2rem;
+`
+
+export const Titulo = styled.h2`
+    max-width: 500px;
     padding-top: 1rem;
+    font-weight:bold;
 `
 
