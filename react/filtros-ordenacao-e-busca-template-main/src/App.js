@@ -33,6 +33,7 @@ function App() {
   }
 
   const onChangeOrdenar = (event) =>{
+    console.log(event.target.value)
     setOrdenar(event.target.value)
   }
 
@@ -68,6 +69,22 @@ function App() {
               return a.id - b.id
             } else if(ordenar === "decrescente"){
               return b.id - a.id        
+            } else if(ordenar === "crescenteAlfabeto"){
+              if (a.name.english < b.name.english) {
+                return -1;
+              }
+              if (a.name.english > b.name.english) {
+                return 1;
+              }
+              return 0;
+            } else if(ordenar === "decrescenteAlfabeto"){
+              if (a.name.english > b.name.english) {
+                return -1;
+              }
+              if (a.name.english < b.name.english) {
+                return 1;
+              }
+              return 0;    
             }
           })
           .map((pokemon) => {

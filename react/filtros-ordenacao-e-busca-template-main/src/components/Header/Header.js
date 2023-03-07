@@ -31,6 +31,8 @@ const Header = ({onChangeId , buscaId , onChangeNome , buscaNome , onChangeOrden
         <option value="">Ordenar</option>
         <option value="crescente">Crescente</option>
         <option value="decrescente">Decrescente</option>
+        <option value="crescenteAlfabeto">Crescente A-Z</option>
+        <option value="decrescenteAlfabeto">Decrescente Z-A</option>
       </select>
       <select onChange={onChangeTipo} name="tipo" id="tipo">
         <option value="">Selecione um tipo</option>
